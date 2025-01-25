@@ -98,7 +98,7 @@ int read_header(FILE *fp, Header *h)
 {
     int buf[3];
 
-    if (fread_wrapper(buf, sizeof(int), 3, fp) == 0)
+    if (fread_wrapper(buf, sizeof(int), 3, fp) != 3)
     {
         return 0;
     }
